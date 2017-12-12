@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB4CE3781FDFB4CE002527BA /* DisruptionMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4CE3771FDFB4CE002527BA /* DisruptionMaker.m */; };
+		CB4CE37C1FDFD1FE002527BA /* CubeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4CE37B1FDFD1FD002527BA /* CubeView.m */; };
+		CB4CE3821FDFD2D3002527BA /* SideView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4CE3811FDFD2D3002527BA /* SideView.m */; };
+		CB4CE3841FDFDA5B002527BA /* CubeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4CE3831FDFDA5B002527BA /* CubeView.xib */; };
+		CB4CE3871FDFE3CF002527BA /* ColorMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4CE3861FDFE3CF002527BA /* ColorMatrix.m */; };
+		CBEAF6C21FDE376C0044F2A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEAF6C11FDE376C0044F2A1 /* AppDelegate.m */; };
+		CBEAF6C81FDE376C0044F2A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBEAF6C61FDE376C0044F2A1 /* Main.storyboard */; };
+		CBEAF6CA1FDE376C0044F2A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBEAF6C91FDE376C0044F2A1 /* Assets.xcassets */; };
+		CBEAF6CD1FDE376D0044F2A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBEAF6CB1FDE376C0044F2A1 /* LaunchScreen.storyboard */; };
+		CBEAF6D01FDE376D0044F2A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEAF6CF1FDE376D0044F2A1 /* main.m */; };
+		CBEAF6DA1FDE376E0044F2A1 /* MagicCubeTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEAF6D91FDE376E0044F2A1 /* MagicCubeTimerTests.m */; };
+		CBEAF6EF1FDE54D30044F2A1 /* MCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEAF6ED1FDE54D30044F2A1 /* MCTabBarController.m */; };
+		CBEAF6F01FDE54D30044F2A1 /* MCTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBEAF6EE1FDE54D30044F2A1 /* MCTabBarController.xib */; };
+		CBEAF6F81FDE7C2D0044F2A1 /* tabbar_timer.png in Resources */ = {isa = PBXBuildFile; fileRef = CBEAF6F61FDE7C2C0044F2A1 /* tabbar_timer.png */; };
+		CBEAF6F91FDE7C2D0044F2A1 /* tabbar_timer_hl.png in Resources */ = {isa = PBXBuildFile; fileRef = CBEAF6F71FDE7C2C0044F2A1 /* tabbar_timer_hl.png */; };
+		CBEAF6FD1FDE85770044F2A1 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEAF6FB1FDE85770044F2A1 /* TimerViewController.m */; };
+		CBEAF6FE1FDE85770044F2A1 /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBEAF6FC1FDE85770044F2A1 /* TimerViewController.xib */; };
+		CBEAF7021FDE880A0044F2A1 /* UIImage+MCScale.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEAF7011FDE880A0044F2A1 /* UIImage+MCScale.m */; };
+		CBEAF7061FDF70560044F2A1 /* MCTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEAF7051FDF70560044F2A1 /* MCTimer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CBEAF6D61FDE376E0044F2A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBEAF6B51FDE376C0044F2A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBEAF6BC1FDE376C0044F2A1;
+			remoteInfo = MagicCubeTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CB4CE3761FDFB4CE002527BA /* DisruptionMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisruptionMaker.h; sourceTree = "<group>"; };
+		CB4CE3771FDFB4CE002527BA /* DisruptionMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisruptionMaker.m; sourceTree = "<group>"; };
+		CB4CE37A1FDFD1FD002527BA /* CubeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CubeView.h; sourceTree = "<group>"; };
+		CB4CE37B1FDFD1FD002527BA /* CubeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CubeView.m; sourceTree = "<group>"; };
+		CB4CE3801FDFD2D3002527BA /* SideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SideView.h; sourceTree = "<group>"; };
+		CB4CE3811FDFD2D3002527BA /* SideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SideView.m; sourceTree = "<group>"; };
+		CB4CE3831FDFDA5B002527BA /* CubeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CubeView.xib; sourceTree = "<group>"; };
+		CB4CE3851FDFE3CF002527BA /* ColorMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorMatrix.h; sourceTree = "<group>"; };
+		CB4CE3861FDFE3CF002527BA /* ColorMatrix.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorMatrix.m; sourceTree = "<group>"; };
+		CBEAF6BD1FDE376C0044F2A1 /* MagicCubeTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicCubeTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBEAF6C01FDE376C0044F2A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CBEAF6C11FDE376C0044F2A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CBEAF6C71FDE376C0044F2A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CBEAF6C91FDE376C0044F2A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBEAF6CC1FDE376C0044F2A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CBEAF6CE1FDE376D0044F2A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBEAF6CF1FDE376D0044F2A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CBEAF6D51FDE376E0044F2A1 /* MagicCubeTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicCubeTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBEAF6D91FDE376E0044F2A1 /* MagicCubeTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MagicCubeTimerTests.m; sourceTree = "<group>"; };
+		CBEAF6DB1FDE376E0044F2A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBEAF6EC1FDE54D30044F2A1 /* MCTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCTabBarController.h; sourceTree = "<group>"; };
+		CBEAF6ED1FDE54D30044F2A1 /* MCTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCTabBarController.m; sourceTree = "<group>"; };
+		CBEAF6EE1FDE54D30044F2A1 /* MCTabBarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCTabBarController.xib; sourceTree = "<group>"; };
+		CBEAF6F61FDE7C2C0044F2A1 /* tabbar_timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_timer.png; sourceTree = "<group>"; };
+		CBEAF6F71FDE7C2C0044F2A1 /* tabbar_timer_hl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_timer_hl.png; sourceTree = "<group>"; };
+		CBEAF6FA1FDE85770044F2A1 /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		CBEAF6FB1FDE85770044F2A1 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		CBEAF6FC1FDE85770044F2A1 /* TimerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerViewController.xib; sourceTree = "<group>"; };
+		CBEAF7001FDE880A0044F2A1 /* UIImage+MCScale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+MCScale.h"; sourceTree = "<group>"; };
+		CBEAF7011FDE880A0044F2A1 /* UIImage+MCScale.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MCScale.m"; sourceTree = "<group>"; };
+		CBEAF7031FDE88C30044F2A1 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		CBEAF7041FDF70560044F2A1 /* MCTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCTimer.h; sourceTree = "<group>"; };
+		CBEAF7051FDF70560044F2A1 /* MCTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCTimer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBEAF6BA1FDE376C0044F2A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBEAF6D21FDE376E0044F2A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB4CE3741FDFB297002527BA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		CB4CE3751FDFB2F4002527BA /* Record */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		CBEAF6B41FDE376C0044F2A1 = {
+			isa = PBXGroup;
+			children = (
+				CBEAF6BF1FDE376C0044F2A1 /* MagicCubeTimer */,
+				CBEAF6D81FDE376E0044F2A1 /* MagicCubeTimerTests */,
+				CBEAF6BE1FDE376C0044F2A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBEAF6BE1FDE376C0044F2A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBEAF6BD1FDE376C0044F2A1 /* MagicCubeTimer.app */,
+				CBEAF6D51FDE376E0044F2A1 /* MagicCubeTimerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBEAF6BF1FDE376C0044F2A1 /* MagicCubeTimer */ = {
+			isa = PBXGroup;
+			children = (
+				CBEAF6E41FDE3B460044F2A1 /* Classes */,
+				CBEAF6E51FDE3B750044F2A1 /* Supporting-Files */,
+				CBEAF6F51FDE7C2C0044F2A1 /* Resources */,
+			);
+			path = MagicCubeTimer;
+			sourceTree = "<group>";
+		};
+		CBEAF6D81FDE376E0044F2A1 /* MagicCubeTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CBEAF6D91FDE376E0044F2A1 /* MagicCubeTimerTests.m */,
+				CBEAF6DB1FDE376E0044F2A1 /* Info.plist */,
+			);
+			path = MagicCubeTimerTests;
+			sourceTree = "<group>";
+		};
+		CBEAF6E41FDE3B460044F2A1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CB4CE3741FDFB297002527BA /* Protocol */,
+				CBEAF6FF1FDE87A00044F2A1 /* Cagtegories */,
+				CBEAF6E61FDE3BA70044F2A1 /* Modules */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CBEAF6E51FDE3B750044F2A1 /* Supporting-Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBEAF6C01FDE376C0044F2A1 /* AppDelegate.h */,
+				CBEAF6C11FDE376C0044F2A1 /* AppDelegate.m */,
+				CBEAF6C61FDE376C0044F2A1 /* Main.storyboard */,
+				CBEAF6C91FDE376C0044F2A1 /* Assets.xcassets */,
+				CBEAF6CB1FDE376C0044F2A1 /* LaunchScreen.storyboard */,
+				CBEAF6CE1FDE376D0044F2A1 /* Info.plist */,
+				CBEAF6CF1FDE376D0044F2A1 /* main.m */,
+				CBEAF7031FDE88C30044F2A1 /* Prefix.pch */,
+			);
+			path = "Supporting-Files";
+			sourceTree = "<group>";
+		};
+		CBEAF6E61FDE3BA70044F2A1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CBEAF6F11FDE754C0044F2A1 /* Timer */,
+				CB4CE3751FDFB2F4002527BA /* Record */,
+				CBEAF6EA1FDE546D0044F2A1 /* Base */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CBEAF6E71FDE3BC20044F2A1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CBEAF6FA1FDE85770044F2A1 /* TimerViewController.h */,
+				CBEAF6FB1FDE85770044F2A1 /* TimerViewController.m */,
+				CBEAF6FC1FDE85770044F2A1 /* TimerViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CBEAF6E81FDE3BD20044F2A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CBEAF7041FDF70560044F2A1 /* MCTimer.h */,
+				CBEAF7051FDF70560044F2A1 /* MCTimer.m */,
+				CB4CE3761FDFB4CE002527BA /* DisruptionMaker.h */,
+				CB4CE3771FDFB4CE002527BA /* DisruptionMaker.m */,
+				CB4CE3851FDFE3CF002527BA /* ColorMatrix.h */,
+				CB4CE3861FDFE3CF002527BA /* ColorMatrix.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CBEAF6E91FDE3BDD0044F2A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB4CE37A1FDFD1FD002527BA /* CubeView.h */,
+				CB4CE37B1FDFD1FD002527BA /* CubeView.m */,
+				CB4CE3831FDFDA5B002527BA /* CubeView.xib */,
+				CB4CE3801FDFD2D3002527BA /* SideView.h */,
+				CB4CE3811FDFD2D3002527BA /* SideView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CBEAF6EA1FDE546D0044F2A1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CBEAF6EB1FDE54770044F2A1 /* Controllers */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CBEAF6EB1FDE54770044F2A1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CBEAF6EC1FDE54D30044F2A1 /* MCTabBarController.h */,
+				CBEAF6ED1FDE54D30044F2A1 /* MCTabBarController.m */,
+				CBEAF6EE1FDE54D30044F2A1 /* MCTabBarController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CBEAF6F11FDE754C0044F2A1 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				CBEAF6E91FDE3BDD0044F2A1 /* Views */,
+				CBEAF6E81FDE3BD20044F2A1 /* Models */,
+				CBEAF6E71FDE3BC20044F2A1 /* Controllers */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		CBEAF6F51FDE7C2C0044F2A1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CBEAF6F61FDE7C2C0044F2A1 /* tabbar_timer.png */,
+				CBEAF6F71FDE7C2C0044F2A1 /* tabbar_timer_hl.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CBEAF6FF1FDE87A00044F2A1 /* Cagtegories */ = {
+			isa = PBXGroup;
+			children = (
+				CBEAF7001FDE880A0044F2A1 /* UIImage+MCScale.h */,
+				CBEAF7011FDE880A0044F2A1 /* UIImage+MCScale.m */,
+			);
+			path = Cagtegories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBEAF6BC1FDE376C0044F2A1 /* MagicCubeTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBEAF6DE1FDE376E0044F2A1 /* Build configuration list for PBXNativeTarget "MagicCubeTimer" */;
+			buildPhases = (
+				CBEAF6B91FDE376C0044F2A1 /* Sources */,
+				CBEAF6BA1FDE376C0044F2A1 /* Frameworks */,
+				CBEAF6BB1FDE376C0044F2A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MagicCubeTimer;
+			productName = MagicCubeTimer;
+			productReference = CBEAF6BD1FDE376C0044F2A1 /* MagicCubeTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CBEAF6D41FDE376E0044F2A1 /* MagicCubeTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBEAF6E11FDE376E0044F2A1 /* Build configuration list for PBXNativeTarget "MagicCubeTimerTests" */;
+			buildPhases = (
+				CBEAF6D11FDE376E0044F2A1 /* Sources */,
+				CBEAF6D21FDE376E0044F2A1 /* Frameworks */,
+				CBEAF6D31FDE376E0044F2A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBEAF6D71FDE376E0044F2A1 /* PBXTargetDependency */,
+			);
+			name = MagicCubeTimerTests;
+			productName = MagicCubeTimerTests;
+			productReference = CBEAF6D51FDE376E0044F2A1 /* MagicCubeTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBEAF6B51FDE376C0044F2A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Zcating;
+				TargetAttributes = {
+					CBEAF6BC1FDE376C0044F2A1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					CBEAF6D41FDE376E0044F2A1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CBEAF6BC1FDE376C0044F2A1;
+					};
+				};
+			};
+			buildConfigurationList = CBEAF6B81FDE376C0044F2A1 /* Build configuration list for PBXProject "MagicCubeTimer" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBEAF6B41FDE376C0044F2A1;
+			productRefGroup = CBEAF6BE1FDE376C0044F2A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBEAF6BC1FDE376C0044F2A1 /* MagicCubeTimer */,
+				CBEAF6D41FDE376E0044F2A1 /* MagicCubeTimerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBEAF6BB1FDE376C0044F2A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBEAF6FE1FDE85770044F2A1 /* TimerViewController.xib in Resources */,
+				CBEAF6CD1FDE376D0044F2A1 /* LaunchScreen.storyboard in Resources */,
+				CBEAF6CA1FDE376C0044F2A1 /* Assets.xcassets in Resources */,
+				CBEAF6C81FDE376C0044F2A1 /* Main.storyboard in Resources */,
+				CBEAF6F81FDE7C2D0044F2A1 /* tabbar_timer.png in Resources */,
+				CBEAF6F01FDE54D30044F2A1 /* MCTabBarController.xib in Resources */,
+				CBEAF6F91FDE7C2D0044F2A1 /* tabbar_timer_hl.png in Resources */,
+				CB4CE3841FDFDA5B002527BA /* CubeView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBEAF6D31FDE376E0044F2A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBEAF6B91FDE376C0044F2A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBEAF7061FDF70560044F2A1 /* MCTimer.m in Sources */,
+				CBEAF6D01FDE376D0044F2A1 /* main.m in Sources */,
+				CBEAF6FD1FDE85770044F2A1 /* TimerViewController.m in Sources */,
+				CB4CE3781FDFB4CE002527BA /* DisruptionMaker.m in Sources */,
+				CBEAF6C21FDE376C0044F2A1 /* AppDelegate.m in Sources */,
+				CBEAF7021FDE880A0044F2A1 /* UIImage+MCScale.m in Sources */,
+				CB4CE3871FDFE3CF002527BA /* ColorMatrix.m in Sources */,
+				CBEAF6EF1FDE54D30044F2A1 /* MCTabBarController.m in Sources */,
+				CB4CE3821FDFD2D3002527BA /* SideView.m in Sources */,
+				CB4CE37C1FDFD1FE002527BA /* CubeView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBEAF6D11FDE376E0044F2A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBEAF6DA1FDE376E0044F2A1 /* MagicCubeTimerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBEAF6D71FDE376E0044F2A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBEAF6BC1FDE376C0044F2A1 /* MagicCubeTimer */;
+			targetProxy = CBEAF6D61FDE376E0044F2A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CBEAF6C61FDE376C0044F2A1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBEAF6C71FDE376C0044F2A1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CBEAF6CB1FDE376C0044F2A1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBEAF6CC1FDE376C0044F2A1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBEAF6DC1FDE376E0044F2A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CBEAF6DD1FDE376E0044F2A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CBEAF6DF1FDE376E0044F2A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9UK6KA2LHR;
+				GCC_PREFIX_HEADER = "MagicCubeTimer/Supporting-Files/Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/MagicCubeTimer/Supporting-Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zcating.MagicCubeTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CBEAF6E01FDE376E0044F2A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9UK6KA2LHR;
+				GCC_PREFIX_HEADER = "MagicCubeTimer/Supporting-Files/Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/MagicCubeTimer/Supporting-Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zcating.MagicCubeTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CBEAF6E21FDE376E0044F2A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9UK6KA2LHR;
+				INFOPLIST_FILE = MagicCubeTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zcating.MagicCubeTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagicCubeTimer.app/MagicCubeTimer";
+			};
+			name = Debug;
+		};
+		CBEAF6E31FDE376E0044F2A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9UK6KA2LHR;
+				INFOPLIST_FILE = MagicCubeTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zcating.MagicCubeTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagicCubeTimer.app/MagicCubeTimer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBEAF6B81FDE376C0044F2A1 /* Build configuration list for PBXProject "MagicCubeTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBEAF6DC1FDE376E0044F2A1 /* Debug */,
+				CBEAF6DD1FDE376E0044F2A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBEAF6DE1FDE376E0044F2A1 /* Build configuration list for PBXNativeTarget "MagicCubeTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBEAF6DF1FDE376E0044F2A1 /* Debug */,
+				CBEAF6E01FDE376E0044F2A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBEAF6E11FDE376E0044F2A1 /* Build configuration list for PBXNativeTarget "MagicCubeTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBEAF6E21FDE376E0044F2A1 /* Debug */,
+				CBEAF6E31FDE376E0044F2A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBEAF6B51FDE376C0044F2A1 /* Project object */;
+}

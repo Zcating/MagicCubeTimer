@@ -1,0 +1,16 @@
+//
+//  Prefix.pch
+//  MagicCubeTimer
+//
+//  Created by  zcating on 11/12/2017.
+//  Copyright © 2017 Zcating. All rights reserved.
+//
+
+#ifndef Prefix_pch
+#define Prefix_pch
+
+#import <UIKit/UIKit.h>
+#import "UIImage+MCScale.h"
+
+
+#endif /* Prefix_pch */

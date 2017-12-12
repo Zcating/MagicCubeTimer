@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CubeView">
+            <connections>
+                <outlet property="blueView" destination="k63-Un-OWY" id="D8l-qa-T63"/>
+                <outlet property="greenView" destination="cwB-uq-zSm" id="mTK-aH-xkH"/>
+                <outlet property="orangeView" destination="4MT-xp-2NX" id="Amy-rg-KQF"/>
+                <outlet property="redView" destination="DaI-7K-zhc" id="1pE-FC-xvf"/>
+                <outlet property="whiteView" destination="YAC-et-hFh" id="MrC-pe-Fda"/>
+                <outlet property="yellowView" destination="npy-y8-CA4" id="hj3-0A-U54"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="170" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwB-uq-zSm" customClass="SideView">
+                    <rect key="frame" x="50" y="5" width="30" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="3gm-rD-JYg"/>
+                        <constraint firstAttribute="width" constant="30" id="vlX-hN-vZ3"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k63-Un-OWY" customClass="SideView">
+                    <rect key="frame" x="50" y="85" width="30" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="pIW-bs-OkY"/>
+                        <constraint firstAttribute="width" constant="30" id="s6x-iS-8go"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DaI-7K-zhc" customClass="SideView">
+                    <rect key="frame" x="90" y="45" width="30" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="Ua5-p1-0o5"/>
+                        <constraint firstAttribute="height" constant="30" id="WAo-dL-gEN"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YAC-et-hFh" customClass="SideView">
+                    <rect key="frame" x="130" y="45" width="30" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="McU-Uo-vhi"/>
+                        <constraint firstAttribute="height" constant="30" id="S5h-ag-3Uu"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4MT-xp-2NX" customClass="SideView">
+                    <rect key="frame" x="10" y="45" width="30" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Nwz-JJ-ZJk"/>
+                        <constraint firstAttribute="width" constant="30" id="bE4-Er-SDE"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npy-y8-CA4" customClass="SideView">
+                    <rect key="frame" x="50" y="45" width="30" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="Bsy-91-WMu"/>
+                        <constraint firstAttribute="height" constant="30" id="rUE-9n-FJH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4MT-xp-2NX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="45" id="4ug-qZ-VT1"/>
+                <constraint firstAttribute="bottom" secondItem="k63-Un-OWY" secondAttribute="bottom" constant="5" id="5Aa-ZU-v8m"/>
+                <constraint firstItem="npy-y8-CA4" firstAttribute="top" secondItem="cwB-uq-zSm" secondAttribute="bottom" constant="10" id="9oi-J7-oto"/>
+                <constraint firstItem="4MT-xp-2NX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="CzI-64-f7u"/>
+                <constraint firstItem="DaI-7K-zhc" firstAttribute="leading" secondItem="npy-y8-CA4" secondAttribute="trailing" constant="10" id="JWi-uQ-Pas"/>
+                <constraint firstItem="npy-y8-CA4" firstAttribute="leading" secondItem="4MT-xp-2NX" secondAttribute="trailing" constant="10" id="JvO-9j-kQK"/>
+                <constraint firstItem="DaI-7K-zhc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="45" id="Om9-s0-QzT"/>
+                <constraint firstItem="npy-y8-CA4" firstAttribute="top" secondItem="cwB-uq-zSm" secondAttribute="bottom" constant="10" id="PTx-XE-tkl"/>
+                <constraint firstItem="YAC-et-hFh" firstAttribute="leading" secondItem="DaI-7K-zhc" secondAttribute="trailing" constant="10" id="QoF-YM-3MB"/>
+                <constraint firstItem="k63-Un-OWY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="Tpr-GG-etM"/>
+                <constraint firstItem="YAC-et-hFh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="45" id="Wet-iz-WVx"/>
+                <constraint firstItem="cwB-uq-zSm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="i2N-eE-Tjp"/>
+                <constraint firstItem="cwB-uq-zSm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="nlF-nc-i2r"/>
+                <constraint firstItem="YAC-et-hFh" firstAttribute="leading" secondItem="DaI-7K-zhc" secondAttribute="trailing" constant="10" id="tzL-OX-MP6"/>
+                <constraint firstItem="k63-Un-OWY" firstAttribute="top" secondItem="npy-y8-CA4" secondAttribute="bottom" constant="10" id="uhK-Eu-uRR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-286.5" y="-161"/>
+        </view>
+    </objects>
+</document>
