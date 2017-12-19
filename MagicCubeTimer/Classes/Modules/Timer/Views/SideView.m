@@ -10,7 +10,7 @@
 
 @implementation SideView
 
--(void)drawRect:(CGRect)rect {
+- (void)drawRect:(CGRect)rect {
     [super drawRect:rect];
     
     // Create nine subview.
@@ -22,10 +22,11 @@
             CGFloat offsetX = x * width;
             UIView *view = [[UIView alloc] initWithFrame:CGRectMake(offsetX, offsetY, width, height)];
             view.layer.borderWidth = 0.5;
-            view.backgroundColor = self.blockColor;
             [self addSubview:view];
         }
     }
 }
+
+
 
 @end

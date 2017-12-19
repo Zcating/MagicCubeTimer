@@ -53,6 +53,7 @@ dispatch_async(dispatch_get_main_queue(), ^{ \
     [self timingTest];
     [self disruptionTest];
     [self rotateTest];
+    [self cubeRotateTest];
 }
 
 - (void)testPerformanceExample {
@@ -81,19 +82,12 @@ dispatch_async(dispatch_get_main_queue(), ^{ \
 #pragma clang diagnostic ignored "-Wundeclared-selector"
     DisruptionMaker *maker = [[DisruptionMaker alloc] init];
     
-    XCTAssertTrue([maker respondsToSelector:@selector(randomDirection)], @"Error of Selector for randomDirection");
-    // get random step
-    for (size_t count = 0; count < 100; count++) {
-        NSString *direction = [maker performSelector:@selector(randomDirection)];
-        XCTAssertNotNil(direction, @"Error of direction!!!");
-        NSLog(@"direction is : %@", direction);
-    }
-    
     // get full steps
     for (size_t count = 0; count < 10; count++) {
-        NSString *disruptionStep = [maker disruptionSteps];
+        NSString *disruptionStep = [maker readableSteps];
         XCTAssertNotNil(disruptionStep, @"Error of disruption step.");
         NSLog(@"%@", disruptionStep);
+        [maker resetSteps];
     }
 #pragma clang diagnostic pop
 }
@@ -105,8 +99,8 @@ dispatch_async(dispatch_get_main_queue(), ^{ \
 #pragma clang diagnostic ignored "-Wundeclared-selector"
     
     ColorMatrix *matrix = [[ColorMatrix alloc] init];
-    XCTAssertTrue([matrix respondsToSelector:@selector(clockwiseRotate:)], @"Error of Selector for clockwiseRotate:");
-    XCTAssertTrue([matrix respondsToSelector:@selector(antiClockwiseRotate:)], @"Error of Selector for antiClockwiseRotate:");
+    XCTAssertTrue([matrix respondsToSelector:@selector(_clockwiseRotate:)], @"Error of Selector for _clockwiseRotate:");
+    XCTAssertTrue([matrix respondsToSelector:@selector(_antiClockwiseRotate:)], @"Error of Selector for _antiClockwiseRotate:");
     /*
      1 2 3
      4 5 6
@@ -125,9 +119,7 @@ dispatch_async(dispatch_get_main_queue(), ^{ \
      8 5 2
      9 6 3
      */
-    [matrix performSelector:@selector(clockwiseRotate:) withObject:matrix.blueSide];
-    NSLog(@"%@", matrix.blueSide);
-    
+    [matrix performSelector:@selector(_clockwiseRotate:) withObject:matrix.blueSide];
     XCTAssertTrue([matrix.blueSide[0][0] isEqualToNumber:@(7)], @"error!!!");
     XCTAssertTrue([matrix.blueSide[0][1] isEqualToNumber:@(4)], @"error!!!");
     XCTAssertTrue([matrix.blueSide[0][2] isEqualToNumber:@(1)], @"error!!!");
@@ -144,9 +136,7 @@ dispatch_async(dispatch_get_main_queue(), ^{ \
      4 5 6
      7 8 9
      */
-    [matrix performSelector:@selector(antiClockwiseRotate:) withObject:matrix.blueSide];
-    NSLog(@"%@", matrix.blueSide);
-    
+    [matrix performSelector:@selector(_antiClockwiseRotate:) withObject:matrix.blueSide];
     XCTAssertTrue([matrix.blueSide[0][0] isEqualToNumber:@(1)], @"error!!!");
     XCTAssertTrue([matrix.blueSide[0][1] isEqualToNumber:@(2)], @"error!!!");
     XCTAssertTrue([matrix.blueSide[0][2] isEqualToNumber:@(3)], @"error!!!");
@@ -159,6 +149,83 @@ dispatch_async(dispatch_get_main_queue(), ^{ \
     
     
 #pragma clang diagnostic pop
+}
+
+-(void)cubeRotateTest {
+    ColorMatrix *matrix = [[ColorMatrix alloc] init];
+    
+    [matrix rotateRight];
+    [matrix contrarotateRight];
+    XCTAssertTrue([matrix didRecover:matrix.yellowSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.whiteSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.blueSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.greenSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.orangeSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.redSide], @"error");
+    
+    
+    [matrix rotateUp];
+    [matrix contrarotateUp];
+    XCTAssertTrue([matrix didRecover:matrix.yellowSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.whiteSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.blueSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.greenSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.orangeSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.redSide], @"error");
+    
+    
+    [matrix rotateDown];
+    [matrix contrarotateDown];
+    XCTAssertTrue([matrix didRecover:matrix.yellowSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.whiteSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.blueSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.greenSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.orangeSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.redSide], @"error");
+    
+//
+    [matrix rotateLeft];
+    [matrix contrarotateLeft];
+    XCTAssertTrue([matrix didRecover:matrix.yellowSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.whiteSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.blueSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.greenSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.orangeSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.redSide], @"error");
+    
+    [matrix rotateFront];
+    [matrix contrarotateFront];
+    XCTAssertTrue([matrix didRecover:matrix.yellowSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.whiteSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.blueSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.greenSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.orangeSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.redSide], @"error");
+
+    [matrix rotateBack];
+    [matrix contrarotateBack];
+    XCTAssertTrue([matrix didRecover:matrix.yellowSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.whiteSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.blueSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.greenSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.orangeSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.redSide], @"error");
+    
+    NSArray *array = @[@5, @2, @11, @8];
+    for (size_t index = 0; index < 6; index++) {
+        [matrix rotationWithSteps:array];
+    }
+    XCTAssertTrue([matrix didRecover:matrix.yellowSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.whiteSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.blueSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.greenSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.orangeSide], @"error");
+    XCTAssertTrue([matrix didRecover:matrix.redSide], @"error");
+    NSLog(@"%@", matrix.yellowSide);
+    NSLog(@"%@", matrix.whiteSide);
+    NSLog(@"%@", matrix.blueSide);
+    NSLog(@"%@", matrix.redSide);
+    
 }
 
 @end

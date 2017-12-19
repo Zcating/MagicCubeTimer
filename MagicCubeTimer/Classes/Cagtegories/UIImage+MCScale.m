@@ -10,7 +10,7 @@
 
 @implementation UIImage (MCScale)
 
--(UIImage *)scaleToSize:(CGSize)size {
+- (UIImage *)scaleToSize:(CGSize)size {
     
     UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
     [self drawInRect:CGRectMake(0, 0, size.width, size.height)];

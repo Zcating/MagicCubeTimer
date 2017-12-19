@@ -10,6 +10,6 @@
 
 @interface UIImage (MCScale)
 
--(UIImage *)scaleToSize:(CGSize)size;
+- (UIImage *)scaleToSize:(CGSize)size;
 
 @end

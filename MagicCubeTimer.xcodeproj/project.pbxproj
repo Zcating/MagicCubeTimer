@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB2A45AA1FE9389100BDF1B9 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2A45A81FE9389100BDF1B9 /* RecordViewController.m */; };
+		CB2A45AB1FE9389100BDF1B9 /* RecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB2A45A91FE9389100BDF1B9 /* RecordViewController.xib */; };
 		CB4CE3781FDFB4CE002527BA /* DisruptionMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4CE3771FDFB4CE002527BA /* DisruptionMaker.m */; };
 		CB4CE37C1FDFD1FE002527BA /* CubeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4CE37B1FDFD1FD002527BA /* CubeView.m */; };
 		CB4CE3821FDFD2D3002527BA /* SideView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4CE3811FDFD2D3002527BA /* SideView.m */; };
@@ -39,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB2A45A71FE9389100BDF1B9 /* RecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
+		CB2A45A81FE9389100BDF1B9 /* RecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
+		CB2A45A91FE9389100BDF1B9 /* RecordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordViewController.xib; sourceTree = "<group>"; };
 		CB4CE3761FDFB4CE002527BA /* DisruptionMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisruptionMaker.h; sourceTree = "<group>"; };
 		CB4CE3771FDFB4CE002527BA /* DisruptionMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisruptionMaker.m; sourceTree = "<group>"; };
 		CB4CE37A1FDFD1FD002527BA /* CubeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CubeView.h; sourceTree = "<group>"; };
@@ -92,6 +97,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB2A45A61FE9382300BDF1B9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CB2A45A71FE9389100BDF1B9 /* RecordViewController.h */,
+				CB2A45A81FE9389100BDF1B9 /* RecordViewController.m */,
+				CB2A45A91FE9389100BDF1B9 /* RecordViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CB2A45AC1FE94EE300BDF1B9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		CB4CE3741FDFB297002527BA /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +124,8 @@
 		CB4CE3751FDFB2F4002527BA /* Record */ = {
 			isa = PBXGroup;
 			children = (
+				CB2A45AC1FE94EE300BDF1B9 /* Views */,
+				CB2A45A61FE9382300BDF1B9 /* Controllers */,
 			);
 			path = Record;
 			sourceTree = "<group>";
@@ -171,9 +195,9 @@
 		CBEAF6E61FDE3BA70044F2A1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CBEAF6EA1FDE546D0044F2A1 /* Base */,
 				CBEAF6F11FDE754C0044F2A1 /* Timer */,
 				CB4CE3751FDFB2F4002527BA /* Record */,
-				CBEAF6EA1FDE546D0044F2A1 /* Base */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -204,11 +228,11 @@
 		CBEAF6E91FDE3BDD0044F2A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CB4CE3801FDFD2D3002527BA /* SideView.h */,
+				CB4CE3811FDFD2D3002527BA /* SideView.m */,
 				CB4CE37A1FDFD1FD002527BA /* CubeView.h */,
 				CB4CE37B1FDFD1FD002527BA /* CubeView.m */,
 				CB4CE3831FDFDA5B002527BA /* CubeView.xib */,
-				CB4CE3801FDFD2D3002527BA /* SideView.h */,
-				CB4CE3811FDFD2D3002527BA /* SideView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -343,6 +367,7 @@
 			files = (
 				CBEAF6FE1FDE85770044F2A1 /* TimerViewController.xib in Resources */,
 				CBEAF6CD1FDE376D0044F2A1 /* LaunchScreen.storyboard in Resources */,
+				CB2A45AB1FE9389100BDF1B9 /* RecordViewController.xib in Resources */,
 				CBEAF6CA1FDE376C0044F2A1 /* Assets.xcassets in Resources */,
 				CBEAF6C81FDE376C0044F2A1 /* Main.storyboard in Resources */,
 				CBEAF6F81FDE7C2D0044F2A1 /* tabbar_timer.png in Resources */,
@@ -373,6 +398,7 @@
 				CBEAF6C21FDE376C0044F2A1 /* AppDelegate.m in Sources */,
 				CBEAF7021FDE880A0044F2A1 /* UIImage+MCScale.m in Sources */,
 				CB4CE3871FDFE3CF002527BA /* ColorMatrix.m in Sources */,
+				CB2A45AA1FE9389100BDF1B9 /* RecordViewController.m in Sources */,
 				CBEAF6EF1FDE54D30044F2A1 /* MCTabBarController.m in Sources */,
 				CB4CE3821FDFD2D3002527BA /* SideView.m in Sources */,
 				CB4CE37C1FDFD1FE002527BA /* CubeView.m in Sources */,

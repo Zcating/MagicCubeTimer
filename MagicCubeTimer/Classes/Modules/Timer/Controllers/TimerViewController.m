@@ -12,11 +12,13 @@
 #import "DisruptionMaker.h"
 #import "UIImage+MCScale.h"
 
+#import "CubeView.h"
 
 
 @interface TimerViewController ()<UIGestureRecognizerDelegate> {
     BOOL _isTiming;
 }
+@property (weak, nonatomic) IBOutlet CubeView *cubeView;
 
 @property (weak, nonatomic) IBOutlet UITextView *disruptionStepView;
 
@@ -45,7 +47,10 @@
     
     [self resetTimerButton];
     
-    self.disruptionStepView.text = [self.maker disruptionSteps];
+    self.disruptionStepView.text = [self.maker readableSteps];
+    
+//    self.cubeView.matrix = [[ColorMatrix alloc] init];
+    self.cubeView.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,6 +64,7 @@
     
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(readyToStart:)];
     longPress.minimumPressDuration = 0.7;
+    longPress.allowableMovement = YES;
     [self.timerButton addGestureRecognizer:longPress];
 }
 
@@ -71,7 +77,7 @@
     }
 }
 
--(void)startTiming {
+- (void)startTiming {
     _isTiming = YES;
     [self.timerButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.timerButton setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
@@ -87,7 +93,8 @@
         [[MCTimer main] stop];
         [self.timerButton setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
         
-        self.disruptionStepView.text = [self.maker disruptionSteps];
+        [self.maker resetSteps];
+        self.disruptionStepView.text = [self.maker readableSteps];
     } else {
         [sender setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.45 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

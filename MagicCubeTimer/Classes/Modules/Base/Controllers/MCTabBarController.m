@@ -8,7 +8,7 @@
 
 #import "MCTabBarController.h"
 #import "TimerViewController.h"
-
+#import "RecordViewController.h"
 
 @interface MCTabBarController ()<UITabBarDelegate>
 
@@ -23,7 +23,7 @@
 - (instancetype)init {
     self = [super initWithNibName:NSStringFromClass([self class]) bundle:nil];
     if (self) {
-        self.viewControllers = @[[[TimerViewController alloc] init],];
+        self.viewControllers = @[[[TimerViewController alloc] init], [[RecordViewController alloc] init]];
     }
     return self;
 }
@@ -58,7 +58,7 @@
 }
 
 #pragma mark - Tab Bar Delegate
--(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     [self addSelectedViewController:item];
 }
 

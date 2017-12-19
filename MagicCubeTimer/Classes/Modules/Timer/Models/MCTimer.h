@@ -14,7 +14,7 @@
 
 +(instancetype)main;
 
--(void)start:(void(^)(NSString *countString, NSTimeInterval time))block;
+- (void)start:(void(^)(NSString *countString, NSTimeInterval time))block;
 
--(void)stop;
+- (void)stop;
 @end

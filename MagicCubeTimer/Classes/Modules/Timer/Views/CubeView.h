@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ColorMatrix.h"
 
 @interface CubeView : UIView
+
+@property (strong, nonatomic) ColorMatrix *matrix;
+
+-(void)resetView;
 
 @end

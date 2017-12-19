@@ -36,7 +36,7 @@
     return self;
 }
 
--(void)start:(void(^)(NSString *countString, NSTimeInterval time))block {
+- (void)start:(void(^)(NSString *countString, NSTimeInterval time))block {
     _didStart = YES;
     self.currentTimestamp = [NSDate date].timeIntervalSince1970;
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.001 repeats:YES block:^(NSTimer * _Nonnull timer) {
@@ -53,7 +53,7 @@
 
 
 
--(void)stop {
+- (void)stop {
     [self.timer invalidate];
     self.timer = nil;
     _didStart = NO;

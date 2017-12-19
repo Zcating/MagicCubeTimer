@@ -9,14 +9,6 @@
 #import "CubeView.h"
 #import "SideView.h"
 
-#define YellowTag   0
-#define WhiteTag    1
-#define OrangeTag   2
-#define RedTag      3
-#define BlueTag     4
-#define GreenTag    5
-
-
 @interface CubeView()
 
 @property (weak, nonatomic) IBOutlet SideView *yellowView;
@@ -26,15 +18,21 @@
 @property (weak, nonatomic) IBOutlet SideView *greenView;
 @property (weak, nonatomic) IBOutlet SideView *orangeView;
 
-@property (strong, nonatomic)  NSMutableArray <NSMutableArray *> *martix;
 
 @end
 
 @implementation CubeView
 
--(void)rotateRight {
-    
+-(ColorMatrix *)matrix {
+    if (_matrix == nil) {
+        _matrix = [[ColorMatrix alloc] init];
+    }
+    return _matrix;
 }
 
+-(void)resetView {
+    [self.matrix reset];
+//    self.yellowView.colors = self.matrix.yellowSide;
+}
 
 @end

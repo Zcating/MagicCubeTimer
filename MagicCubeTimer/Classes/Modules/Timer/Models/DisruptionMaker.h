@@ -10,6 +10,14 @@
 
 @interface DisruptionMaker : NSObject
 
--(NSString *)disruptionSteps;
+@property (nonatomic, copy) NSNumber *stepNumber;
+
+@property (nonatomic, strong, readonly) NSArray<NSNumber *> *steps;
+
+- (instancetype)initWithStepNumber:(NSInteger)num;
+
+- (NSString *)readableSteps;
+
+- (void)resetSteps;
 
 @end
