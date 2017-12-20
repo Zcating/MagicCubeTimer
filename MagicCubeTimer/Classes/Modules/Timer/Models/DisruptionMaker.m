@@ -19,7 +19,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.stepNumber = @15;
+        self.stepNumber = @20;
     }
     return self;
 }

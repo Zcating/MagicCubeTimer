@@ -7,7 +7,7 @@
 //
 
 #import "RecordViewController.h"
-
+#import "RecordCell.h"
 @interface RecordViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -32,6 +32,7 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    [self.tableView registerNib:[UINib nibWithNibName:@"RecordCell" bundle:nil] forCellReuseIdentifier:@"RecordCell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,15 +40,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-
 -(NSArray *)dataArray {
     if (_dataArray == nil) {
-        _dataArray = @[];
+        _dataArray = @[@{@"title":@"还原次数", @"content":@""},
+                       @{@"title":@"最快还原", @"content":@""},
+                       @{@"title":@"最慢还原", @"content":@""},
+                       @{@"title":@"去头去尾取平均", @"content":@""}];
     }
     return _dataArray;
 }
-//- (void)
-
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -57,17 +58,43 @@
     return self.dataArray.count;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
+}
 
-- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
-    }
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    RecordCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecordCell"];
+    cell.titleLabel.text = self.dataArray[indexPath.row][@"title"];
+    cell.contentLabel.text = self.dataArray[indexPath.row][@"content"];
+
     return cell;
 }
 
+#pragma mark - Table View Header & Footer
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 10;
+}
 
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 10;
+}
 
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *view = [UIView new];
+    view.backgroundColor = [UIColor clearColor];
+    return view;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    UIView *view = [UIView new];
+    view.backgroundColor = [UIColor clearColor];
+    return view;
+}
+
+#pragma mark - Selected
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 
 @end

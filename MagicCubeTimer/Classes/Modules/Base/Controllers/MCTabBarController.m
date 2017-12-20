@@ -9,7 +9,7 @@
 #import "MCTabBarController.h"
 #import "TimerViewController.h"
 #import "RecordViewController.h"
-
+#import "SettingViewController.h"
 @interface MCTabBarController ()<UITabBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UITabBar *tabBar;
@@ -23,7 +23,7 @@
 - (instancetype)init {
     self = [super initWithNibName:NSStringFromClass([self class]) bundle:nil];
     if (self) {
-        self.viewControllers = @[[[TimerViewController alloc] init], [[RecordViewController alloc] init]];
+        self.viewControllers = @[[[TimerViewController alloc] init], [[RecordViewController alloc] init],[[SettingViewController alloc] init]];
     }
     return self;
 }
@@ -35,14 +35,26 @@
     self.tabBar.items[0].image = [[UIImage imageNamed:@"tabbar_timer"] scaleToSize:CGSizeMake(30, 30)];
     self.tabBar.items[0].selectedImage = [[UIImage imageNamed:@"tabbar_timer_hl"] scaleToSize:CGSizeMake(30, 30)];
     self.tabBar.items[0].title = @"计时";
-    self.tabBar.selectedItem = self.tabBar.items[0];
+    self.tabBar.items[0].tag = 0;
     
+    self.tabBar.items[1].image = [[UIImage imageNamed:@"tabbar_data"] scaleToSize:CGSizeMake(30, 30)];
+    self.tabBar.items[1].selectedImage = [[UIImage imageNamed:@"tabbar_data_hl"] scaleToSize:CGSizeMake(30, 30)];
+    self.tabBar.items[1].title = @"数据";
+    self.tabBar.items[1].tag = 1;
+    
+    self.tabBar.items[2].image = [[UIImage imageNamed:@"tabbar_setting"] scaleToSize:CGSizeMake(30, 30)];
+    self.tabBar.items[2].selectedImage = [[UIImage imageNamed:@"tabbar_setting_hl"] scaleToSize:CGSizeMake(30, 30)];
+    self.tabBar.items[2].title = @"设置";
+    self.tabBar.items[2].tag = 2;
+    
+    self.tabBar.selectedItem = self.tabBar.items[0];
     
     for (UIViewController *viewController in self.viewControllers) {
         viewController.tabBarItem = self.tabBar.items[0];
     }
     
 //    self.tabBar.barTintColor = [UIColor colorWithRed:55 green:71 blue:79 alpha:1];
+    
     [self addSelectedViewController:0];
 }
 

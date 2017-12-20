@@ -14,6 +14,15 @@
 		CB4CE3821FDFD2D3002527BA /* SideView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4CE3811FDFD2D3002527BA /* SideView.m */; };
 		CB4CE3841FDFDA5B002527BA /* CubeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4CE3831FDFDA5B002527BA /* CubeView.xib */; };
 		CB4CE3871FDFE3CF002527BA /* ColorMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4CE3861FDFE3CF002527BA /* ColorMatrix.m */; };
+		CBDE3D731FEA482000CC0D01 /* tabbar_data.png in Resources */ = {isa = PBXBuildFile; fileRef = CBDE3D711FEA482000CC0D01 /* tabbar_data.png */; };
+		CBDE3D741FEA482000CC0D01 /* tabbar_data_hl.png in Resources */ = {isa = PBXBuildFile; fileRef = CBDE3D721FEA482000CC0D01 /* tabbar_data_hl.png */; };
+		CBDE3D771FEA49D400CC0D01 /* tabbar_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = CBDE3D751FEA49D300CC0D01 /* tabbar_setting.png */; };
+		CBDE3D781FEA49D400CC0D01 /* tabbar_setting_hl.png in Resources */ = {isa = PBXBuildFile; fileRef = CBDE3D761FEA49D300CC0D01 /* tabbar_setting_hl.png */; };
+		CBDE3D7E1FEA4A7900CC0D01 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDE3D7C1FEA4A7900CC0D01 /* SettingViewController.m */; };
+		CBDE3D7F1FEA4A7900CC0D01 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBDE3D7D1FEA4A7900CC0D01 /* SettingViewController.xib */; };
+		CBDE3D831FEA863400CC0D01 /* RecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDE3D811FEA863400CC0D01 /* RecordCell.m */; };
+		CBDE3D841FEA863400CC0D01 /* RecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBDE3D821FEA863400CC0D01 /* RecordCell.xib */; };
+		CBDE3D861FEA893300CC0D01 /* table_view_cell_enter.png in Resources */ = {isa = PBXBuildFile; fileRef = CBDE3D851FEA893300CC0D01 /* table_view_cell_enter.png */; };
 		CBEAF6C21FDE376C0044F2A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEAF6C11FDE376C0044F2A1 /* AppDelegate.m */; };
 		CBEAF6C81FDE376C0044F2A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBEAF6C61FDE376C0044F2A1 /* Main.storyboard */; };
 		CBEAF6CA1FDE376C0044F2A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBEAF6C91FDE376C0044F2A1 /* Assets.xcassets */; };
@@ -53,6 +62,17 @@
 		CB4CE3831FDFDA5B002527BA /* CubeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CubeView.xib; sourceTree = "<group>"; };
 		CB4CE3851FDFE3CF002527BA /* ColorMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorMatrix.h; sourceTree = "<group>"; };
 		CB4CE3861FDFE3CF002527BA /* ColorMatrix.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorMatrix.m; sourceTree = "<group>"; };
+		CBDE3D711FEA482000CC0D01 /* tabbar_data.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_data.png; sourceTree = "<group>"; };
+		CBDE3D721FEA482000CC0D01 /* tabbar_data_hl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_data_hl.png; sourceTree = "<group>"; };
+		CBDE3D751FEA49D300CC0D01 /* tabbar_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_setting.png; sourceTree = "<group>"; };
+		CBDE3D761FEA49D300CC0D01 /* tabbar_setting_hl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_setting_hl.png; sourceTree = "<group>"; };
+		CBDE3D7B1FEA4A7900CC0D01 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		CBDE3D7C1FEA4A7900CC0D01 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		CBDE3D7D1FEA4A7900CC0D01 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		CBDE3D801FEA863400CC0D01 /* RecordCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordCell.h; sourceTree = "<group>"; };
+		CBDE3D811FEA863400CC0D01 /* RecordCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecordCell.m; sourceTree = "<group>"; };
+		CBDE3D821FEA863400CC0D01 /* RecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordCell.xib; sourceTree = "<group>"; };
+		CBDE3D851FEA893300CC0D01 /* table_view_cell_enter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = table_view_cell_enter.png; sourceTree = "<group>"; };
 		CBEAF6BD1FDE376C0044F2A1 /* MagicCubeTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicCubeTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBEAF6C01FDE376C0044F2A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CBEAF6C11FDE376C0044F2A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -110,15 +130,18 @@
 		CB2A45AC1FE94EE300BDF1B9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CBDE3D801FEA863400CC0D01 /* RecordCell.h */,
+				CBDE3D811FEA863400CC0D01 /* RecordCell.m */,
+				CBDE3D821FEA863400CC0D01 /* RecordCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		CB4CE3741FDFB297002527BA /* Protocol */ = {
+		CB4CE3741FDFB297002527BA /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Protocol;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		CB4CE3751FDFB2F4002527BA /* Record */ = {
@@ -128,6 +151,24 @@
 				CB2A45A61FE9382300BDF1B9 /* Controllers */,
 			);
 			path = Record;
+			sourceTree = "<group>";
+		};
+		CBDE3D791FEA4A5400CC0D01 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				CBDE3D7A1FEA4A5D00CC0D01 /* Controllers */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		CBDE3D7A1FEA4A5D00CC0D01 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CBDE3D7B1FEA4A7900CC0D01 /* SettingViewController.h */,
+				CBDE3D7C1FEA4A7900CC0D01 /* SettingViewController.m */,
+				CBDE3D7D1FEA4A7900CC0D01 /* SettingViewController.xib */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		CBEAF6B41FDE376C0044F2A1 = {
@@ -170,7 +211,7 @@
 		CBEAF6E41FDE3B460044F2A1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CB4CE3741FDFB297002527BA /* Protocol */,
+				CB4CE3741FDFB297002527BA /* Managers */,
 				CBEAF6FF1FDE87A00044F2A1 /* Cagtegories */,
 				CBEAF6E61FDE3BA70044F2A1 /* Modules */,
 			);
@@ -198,6 +239,7 @@
 				CBEAF6EA1FDE546D0044F2A1 /* Base */,
 				CBEAF6F11FDE754C0044F2A1 /* Timer */,
 				CB4CE3751FDFB2F4002527BA /* Record */,
+				CBDE3D791FEA4A5400CC0D01 /* Setting */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -268,6 +310,11 @@
 		CBEAF6F51FDE7C2C0044F2A1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CBDE3D851FEA893300CC0D01 /* table_view_cell_enter.png */,
+				CBDE3D761FEA49D300CC0D01 /* tabbar_setting_hl.png */,
+				CBDE3D751FEA49D300CC0D01 /* tabbar_setting.png */,
+				CBDE3D711FEA482000CC0D01 /* tabbar_data.png */,
+				CBDE3D721FEA482000CC0D01 /* tabbar_data_hl.png */,
 				CBEAF6F61FDE7C2C0044F2A1 /* tabbar_timer.png */,
 				CBEAF6F71FDE7C2C0044F2A1 /* tabbar_timer_hl.png */,
 			);
@@ -366,12 +413,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBEAF6FE1FDE85770044F2A1 /* TimerViewController.xib in Resources */,
+				CBDE3D741FEA482000CC0D01 /* tabbar_data_hl.png in Resources */,
+				CBDE3D781FEA49D400CC0D01 /* tabbar_setting_hl.png in Resources */,
 				CBEAF6CD1FDE376D0044F2A1 /* LaunchScreen.storyboard in Resources */,
 				CB2A45AB1FE9389100BDF1B9 /* RecordViewController.xib in Resources */,
 				CBEAF6CA1FDE376C0044F2A1 /* Assets.xcassets in Resources */,
 				CBEAF6C81FDE376C0044F2A1 /* Main.storyboard in Resources */,
+				CBDE3D7F1FEA4A7900CC0D01 /* SettingViewController.xib in Resources */,
+				CBDE3D771FEA49D400CC0D01 /* tabbar_setting.png in Resources */,
+				CBDE3D841FEA863400CC0D01 /* RecordCell.xib in Resources */,
+				CBDE3D861FEA893300CC0D01 /* table_view_cell_enter.png in Resources */,
 				CBEAF6F81FDE7C2D0044F2A1 /* tabbar_timer.png in Resources */,
 				CBEAF6F01FDE54D30044F2A1 /* MCTabBarController.xib in Resources */,
+				CBDE3D731FEA482000CC0D01 /* tabbar_data.png in Resources */,
 				CBEAF6F91FDE7C2D0044F2A1 /* tabbar_timer_hl.png in Resources */,
 				CB4CE3841FDFDA5B002527BA /* CubeView.xib in Resources */,
 			);
@@ -394,6 +448,7 @@
 				CBEAF7061FDF70560044F2A1 /* MCTimer.m in Sources */,
 				CBEAF6D01FDE376D0044F2A1 /* main.m in Sources */,
 				CBEAF6FD1FDE85770044F2A1 /* TimerViewController.m in Sources */,
+				CBDE3D831FEA863400CC0D01 /* RecordCell.m in Sources */,
 				CB4CE3781FDFB4CE002527BA /* DisruptionMaker.m in Sources */,
 				CBEAF6C21FDE376C0044F2A1 /* AppDelegate.m in Sources */,
 				CBEAF7021FDE880A0044F2A1 /* UIImage+MCScale.m in Sources */,
@@ -402,6 +457,7 @@
 				CBEAF6EF1FDE54D30044F2A1 /* MCTabBarController.m in Sources */,
 				CB4CE3821FDFD2D3002527BA /* SideView.m in Sources */,
 				CB4CE37C1FDFD1FE002527BA /* CubeView.m in Sources */,
+				CBDE3D7E1FEA4A7900CC0D01 /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

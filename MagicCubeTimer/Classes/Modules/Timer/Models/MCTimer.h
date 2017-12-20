@@ -12,8 +12,6 @@
 
 @property (readonly) BOOL didStart;
 
-+(instancetype)main;
-
 - (void)start:(void(^)(NSString *countString, NSTimeInterval time))block;
 
 - (void)stop;

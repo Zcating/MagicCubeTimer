@@ -26,6 +26,8 @@
 
 @property (nonatomic, strong) DisruptionMaker *maker;
 
+@property (nonatomic, strong) MCTimer *timer;
+
 @end
 
 @implementation TimerViewController
@@ -34,6 +36,7 @@
     self = [super initWithNibName:NSStringFromClass([self class]) bundle:nil];
     if (self) {
         self.maker = [[DisruptionMaker alloc] init];
+        self.timer = [[MCTimer alloc] init];
     }
     return self;
 }
@@ -82,7 +85,7 @@
     [self.timerButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.timerButton setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
     
-    [[MCTimer main] start:^(NSString *countString, NSTimeInterval time) {
+    [self.timer start:^(NSString *countString, NSTimeInterval time) {
         [self.timerButton setTitle:countString forState:UIControlStateNormal];
     }];
 }
@@ -90,7 +93,7 @@
 - (IBAction)touched:(UIButton *)sender {
     if (_isTiming) {
         _isTiming = NO;
-        [[MCTimer main] stop];
+        [self.timer stop];
         [self.timerButton setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
         
         [self.maker resetSteps];

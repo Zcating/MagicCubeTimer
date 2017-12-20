@@ -26,6 +26,8 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <items>
                         <tabBarItem title="计时" id="VN5-Ye-xMs"/>
+                        <tabBarItem title="数据" id="Ba7-Ll-exu"/>
+                        <tabBarItem title="设置" id="pnz-fO-JlL"/>
                     </items>
                     <color key="barTintColor" red="0.2156862745" green="0.2784313725" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="selectedImageTintColor" red="0.3411764706" green="0.79607843140000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>

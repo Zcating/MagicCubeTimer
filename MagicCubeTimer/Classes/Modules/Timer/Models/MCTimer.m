@@ -18,14 +18,14 @@
 
 @implementation MCTimer
 
-+(instancetype)main {
-    static MCTimer *timer;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        timer = [[MCTimer alloc] init];
-    });
-    return timer;
-}
+//+(instancetype)main {
+//    static MCTimer *timer;
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        timer = [[MCTimer alloc] init];
+//    });
+//    return timer;
+//}
 
 - (instancetype)init
 {
@@ -46,8 +46,13 @@
         int minutes = (int)(time/60);
         int seconds = (time - (minutes * 60));
         int mills = (time - seconds - (minutes * 60)) * 1000;
-        NSString *dateString = [NSString stringWithFormat:@"%02d:%02d:%03d", minutes, seconds, mills];
-        block(dateString, time);
+        NSString *timeString = nil;
+        if (minutes == 0) {
+            timeString = [NSString stringWithFormat:@"%d.%03d", seconds, mills];
+        } else {
+            timeString = [NSString stringWithFormat:@"%d:%02d.%03d", minutes, seconds, mills];
+        }
+        block(timeString, time);
     }];
 }
 
