@@ -12,7 +12,7 @@
 #import "SettingViewController.h"
 @interface MCTabBarController ()<UITabBarDelegate>
 
-@property (weak, nonatomic) IBOutlet UITabBar *tabBar;
+@property (strong, nonatomic) IBOutlet UITabBar *tabBar;
 
 @property (strong, nonatomic, nullable) NSArray<UIViewController *> *viewControllers;
 
@@ -23,13 +23,25 @@
 - (instancetype)init {
     self = [super initWithNibName:NSStringFromClass([self class]) bundle:nil];
     if (self) {
-        self.viewControllers = @[[[TimerViewController alloc] init], [[RecordViewController alloc] init],[[SettingViewController alloc] init]];
+        UINavigationController *recordController = [[UINavigationController alloc] initWithRootViewController:[[RecordViewController alloc] init]];
+
+        UINavigationController *settingController = [[UINavigationController alloc] initWithRootViewController:[[SettingViewController alloc] init]];
+
+        self.viewControllers = @[[[TimerViewController alloc] init], recordController, settingController];
     }
     return self;
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+//
+    UINavigationController *recordController = [[UINavigationController alloc] initWithRootViewController:[[RecordViewController alloc] init]];
+
+    UINavigationController *settingController = [[UINavigationController alloc] initWithRootViewController:[[SettingViewController alloc] init]];
+
+    self.viewControllers = @[[[TimerViewController alloc] init], recordController, settingController];
+    
     self.tabBar.delegate = self;
     
     self.tabBar.items[0].image = [[UIImage imageNamed:@"tabbar_timer"] scaleToSize:CGSizeMake(30, 30)];
@@ -52,9 +64,6 @@
     for (UIViewController *viewController in self.viewControllers) {
         viewController.tabBarItem = self.tabBar.items[0];
     }
-    
-//    self.tabBar.barTintColor = [UIColor colorWithRed:55 green:71 blue:79 alpha:1];
-    
     [self addSelectedViewController:0];
 }
 
@@ -64,14 +73,15 @@
 }
 
 
-- (void)addSelectedViewController:(UITabBarItem *)item {
-    [self.view addSubview:self.viewControllers[item.tag].view];
-    [self.view bringSubviewToFront:self.tabBar];
+- (void)addSelectedViewController:(NSUInteger)index {
+//    [self.view addSubview:self.viewControllers[index].view];
+    [self.view insertSubview:self.viewControllers[index].view belowSubview:self.tabBar];
+//    [self.view bringSubviewToFront:self.tabBar];
 }
 
 #pragma mark - Tab Bar Delegate
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
-    [self addSelectedViewController:item];
+    [self addSelectedViewController:item.tag];
 }
 
 

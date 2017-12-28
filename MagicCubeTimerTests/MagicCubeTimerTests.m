@@ -66,14 +66,15 @@ dispatch_async(dispatch_get_main_queue(), ^{ \
 }
 
 - (void)timingTest {
-    [[MCTimer main] start:^(NSString *countString, NSTimeInterval time) {
+    MCTimer *timer = [[MCTimer alloc] init];
+    [timer start:^(NSString *countString, NSTimeInterval time) {
         NSLog(@"%@", countString);
         if (time > 1) {
             UNIT_TEST_NOTIFY
         }
     }];
     UNIT_TEST_WAIT
-    [[MCTimer main] stop];
+    [timer stop];
 }
 
 

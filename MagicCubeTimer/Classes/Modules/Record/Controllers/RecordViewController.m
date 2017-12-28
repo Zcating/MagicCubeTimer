@@ -7,12 +7,12 @@
 //
 
 #import "RecordViewController.h"
-#import "RecordCell.h"
-@interface RecordViewController ()<UITableViewDelegate, UITableViewDataSource>
+#import "CountViewController.h"
+#import "MCTableViewKit.h"
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@interface RecordViewController ()
 
-@property (strong, nonatomic) NSArray *dataArray;
+@property (nonatomic, strong) MCTableViewInfo *info;
 
 @end
 
@@ -21,18 +21,21 @@
 - (instancetype)init {
     self = [super initWithNibName:NSStringFromClass([self class]) bundle:nil];
     if (self) {
-        
+        self.info = [[MCTableViewInfo alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    [self.tableView registerNib:[UINib nibWithNibName:@"RecordCell" bundle:nil] forCellReuseIdentifier:@"RecordCell"];
+    self.navigationController.title = @"记录";
+    
+    [self.view addSubview:self.info.tableView];
+    
+    [self initRecordSection];
+    
+    [self.info.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,61 +43,26 @@
     // Dispose of any resources that can be recreated.
 }
 
--(NSArray *)dataArray {
-    if (_dataArray == nil) {
-        _dataArray = @[@{@"title":@"还原次数", @"content":@""},
-                       @{@"title":@"最快还原", @"content":@""},
-                       @{@"title":@"最慢还原", @"content":@""},
-                       @{@"title":@"去头去尾取平均", @"content":@""}];
-    }
-    return _dataArray;
+- (void)initRecordSection {
+    MCTableViewSectionInfo *sectionInfo = [MCTableViewSectionInfo defaultSection];
+    [sectionInfo addCell:[MCTableViewCellInfo normalCellForTitle:@"还原次数" content:@"" accessoryType:UITableViewCellAccessoryDisclosureIndicator handler:^(id sender) {
+        [self.navigationController pushViewController:[[CountViewController alloc] init] animated:YES];
+    }]];
+    [sectionInfo addCell:[MCTableViewCellInfo normalCellForTitle:@"最快还原时间" content:@"" accessoryType:UITableViewCellAccessoryDisclosureIndicator handler:^(id sender) {
+        
+    }]];
+    
+    [sectionInfo addCell:[MCTableViewCellInfo normalCellForTitle:@"最慢还原时间" content:@"" accessoryType:UITableViewCellAccessoryDisclosureIndicator handler:^(id sender) {
+        
+    }]];
+    
+    [sectionInfo addCell:[MCTableViewCellInfo normalCellForTitle:@"平均还原时间" content:@"" accessoryType:UITableViewCellAccessoryDisclosureIndicator handler:^(id sender) {
+        
+    }]];
+    
+    
+    [self.info addSection:sectionInfo];
+    
 }
-
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataArray.count;
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    RecordCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecordCell"];
-    cell.titleLabel.text = self.dataArray[indexPath.row][@"title"];
-    cell.contentLabel.text = self.dataArray[indexPath.row][@"content"];
-
-    return cell;
-}
-
-#pragma mark - Table View Header & Footer
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 10;
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 10;
-}
-
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView *view = [UIView new];
-    view.backgroundColor = [UIColor clearColor];
-    return view;
-}
-
--(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    UIView *view = [UIView new];
-    view.backgroundColor = [UIColor clearColor];
-    return view;
-}
-
-#pragma mark - Selected
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
 
 @end

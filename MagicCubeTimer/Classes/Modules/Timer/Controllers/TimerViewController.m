@@ -10,7 +10,7 @@
 
 #import "MCTimer.h"
 #import "DisruptionMaker.h"
-#import "UIImage+MCScale.h"
+#import "DeskPattingObserver.h"
 
 #import "CubeView.h"
 
@@ -28,6 +28,8 @@
 
 @property (nonatomic, strong) MCTimer *timer;
 
+@property (nonatomic, strong) DeskPattingObserver *stopper;
+
 @end
 
 @implementation TimerViewController
@@ -37,6 +39,7 @@
     if (self) {
         self.maker = [[DisruptionMaker alloc] init];
         self.timer = [[MCTimer alloc] init];
+        self.stopper = [[DeskPattingObserver alloc] init];
     }
     return self;
 }
@@ -47,7 +50,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self resetTimerButton];
     
     self.disruptionStepView.text = [self.maker readableSteps];
@@ -61,6 +63,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Count Logic
 - (void)resetTimerButton {
     [self.timerButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.timerButton setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
@@ -88,16 +91,27 @@
     [self.timer start:^(NSString *countString, NSTimeInterval time) {
         [self.timerButton setTitle:countString forState:UIControlStateNormal];
     }];
+    
+    [self.stopper observePattingWithCompletion:^{
+        [self stopTiming];
+    }];
+}
+
+- (void)stopTiming {
+    _isTiming = NO;
+    [self.timer stop];
+    [self.timerButton setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
+    
+    [self.maker resetSteps];
+    self.disruptionStepView.text = [self.maker readableSteps];
+    
+    
+    [self.stopper stopGyro];
 }
 
 - (IBAction)touched:(UIButton *)sender {
     if (_isTiming) {
-        _isTiming = NO;
-        [self.timer stop];
-        [self.timerButton setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-        
-        [self.maker resetSteps];
-        self.disruptionStepView.text = [self.maker readableSteps];
+        [self stopTiming];
     } else {
         [sender setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.45 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
